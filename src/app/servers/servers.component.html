@@ -11,6 +11,8 @@
   [disabled]="!canCreateServer"
   (click)="onClickCreateServer()">Create Server +</button>
 <p>{{ status }}</p>
+<p *ngIf="didCreateServer; else noServer">You did create the server!</p>
+<ng-template #noServer>There is no server :(</ng-template>
 <h1>App Servers</h1>
 <app-server></app-server>
 <app-server></app-server>

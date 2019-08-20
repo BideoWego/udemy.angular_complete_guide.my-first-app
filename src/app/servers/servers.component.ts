@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   canCreateServer = false;
+  didCreateServer = false;
   serverName = 'Untitled';
   status = "No server created";
 
@@ -26,6 +27,7 @@ export class ServersComponent implements OnInit {
 
   onClickCreateServer() {
     this.status = "Server created!";
+    this.didCreateServer = true;
   }
 
   onChangeServerName(event: any) {
